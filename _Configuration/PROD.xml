@@ -1,0 +1,5 @@
+<Configuration CertificateThumbprint="948C71E8CE937C94FAFE2C09FA77400263821519" SharedConfiguration="#{EnvironmentConfigDir}\SharedConfig.xml">
+  <Key Name="deploy_account" Encrypted="false">flexirent\svc_vstsdeploy_prod</Key>
+  <Key Name="deploy_password" Encrypted="true">mjGFjkJ1B2ylSR6kauzyjB0IJMyqZ36EAkKBwgpJnRUQTWmnqOyFqfoVQ/XWkUNiMJ6W1wp5qs2PrAfmwZXE/hv1vZW+UZWHXfHs13ssX94+fzV3a7ulKS1ZSrEk094jk3NpP1C31PUzYKJJ53bedDGTcY1lHrRBEKtCKNeWWBs=</Key>
+  <Key Name="RunTime_TestCategory" Encrypted="false">FullRegression</Key>
+</Configuration>

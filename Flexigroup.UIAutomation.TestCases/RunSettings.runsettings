@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings> 
+  <!-- Parameters used by tests at runtime -->
+  <TestRunParameters>    
+    <!-- Extent report parameters -->
+    <Parameter name="ExtentMode" value="Fast" />
+    <Parameter name="webAppUserName" value="Admin" />
+    <Parameter name="applicationOs" value="Windows" />
+    <Parameter name="hostName" value="SIT" />
+    <Parameter name="executionUsername" value="Arun" />
+
+    <!-- Test setup parameters-->
+    <Parameter name="dataDrivenTest" value="true" />
+    <Parameter name="environment" value="local"/>    <!-- Can be local or browserstack-->
+    <Parameter name="platform" value="AndroidApp"/>    <!-- Desktop, AndroidApp, Androidweb, iosApp, iosWeb-->
+    <Parameter name="ChromeModeHeadless" value="false" />
+    <Parameter name="ChromeModeIncognito" value="false" />
+    <Parameter name="CloseBrowserAfterEachTest" value="true" />
+
+    <!-- App name-->
+    <Parameter name="appPackage" value="com.shophumm.sit" />
+    
+    <!-- Mobile OS type -->
+    <Parameter name="mobileOS" value="Android"/>    <!-- Can be Android or IOS-->
+    <Parameter name="platformVersion" value="11.0"/>
+    <Parameter name="appLocation" value="C://Humm//au-sit-1.3.0-168.apk"/>
+
+    <!-- Physical device name-->
+    <Parameter name="deviceUuid" value="853cc700"/> 
+    <!-- emulator-5554 -->
+    <!-- HWK9X18918G01639 -->
+    <!-- a0e5ee291ff8f417 -->
+
+    <!-- Android device params-->
+    <Parameter name="appActivity" value="au.com.flexirent.humm.screens.home.HomeActivity"/>    
+
+    <!-- Browserstack Device Type-->
+    <Parameter name="deviceName" value="iPhone 8"/>    
+
+    <!-- Browserstack parameters-->   
+    <Parameter name="iosBrowsterStackAppId" value="bs://b651823b8e14c04289285cd690a3de7095d1d43d"/>
+    <Parameter name="androidBrowsterStackAppId" value="bs://ad033b397d87b5918b4ce183d73ca13f73c1dbe6"/>
+  </TestRunParameters>
+  <MSTest>
+    <EnableBaseClassTestMethodsFromOtherAssemblies>true</EnableBaseClassTestMethodsFromOtherAssemblies>
+    <Parallelize>
+      <Workers>1</Workers>
+      <Scope>MethodLevel</Scope>
+    </Parallelize>
+  </MSTest>  
+  <RunConfiguration>
+    <!-- <ResultsDirectory>%temp%\TestResults</ResultsDirectory>-->
+    <!-- <MaxCpuCount>5</MaxCpuCount> -->   
+  </RunConfiguration> 
+</RunSettings> 

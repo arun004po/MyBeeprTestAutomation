@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>FlexigroupTestAutomation_Configuration</id>
+		<version>$version$</version>
+		<authors>FlexiGroup Limited</authors>
+		<description>Flexigroup Test Automation Configuration Package</description>
+	</metadata>
+	<files>
+		<file src="..\_Configuration\*.xml" target="\" />
+	</files>
+</package>

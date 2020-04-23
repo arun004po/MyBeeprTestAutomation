@@ -1,0 +1,2658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://decisionintellect.com/inteport/" xmlns:s1="http://www.docusign.net/API/3.0" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://decisionintellect.com/inteport/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://decisionintellect.com/inteport/">
+      <s:import namespace="http://www.docusign.net/API/3.0" />
+      <s:element name="ExecuteRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sRequestXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteXMLRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sRequestXML">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteXMLRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteXMLRequestResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sRequestXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitXMLRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sRequestXML">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitXMLRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitXMLRequestResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransformRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sRequestXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransformRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransformRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransformXMLRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sRequestXML">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransformXMLRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransformXMLRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteLongRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sRequestXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteLongRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteLongRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckLongRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sRequestNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_sGUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_sCompany" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_sOperator" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_bRemove" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckLongRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckLongRequestResult" type="tns:ExecuteResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ExecuteResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Finished" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Response" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreditSenseConnectUpdate">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreditSenseConnectUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditSenseConnectUpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YodleeUpload">
+        <s:complexType />
+      </s:element>
+      <s:element name="YodleeUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="YodleeUploadResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocuSignConnectUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocuSignEnvelopeInformation" type="s1:DocuSignEnvelopeInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocuSignConnectUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocuSignConnectUpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkedDocumentXmlSOAP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LinkType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Applicant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AppID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ActionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HtmlData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkedDocumentXmlSOAPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LinkedDocumentXmlSOAPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkedDocumentXml">
+        <s:complexType />
+      </s:element>
+      <s:element name="LinkedDocumentXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LinkedDocumentXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AppID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Applicants" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Category" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDocumentListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAndAttachDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sCompany" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_sMerchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_sOperator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_sPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_RequestID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_AttachmentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_Filename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_Document" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAndAttachDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadAndAttachDocumentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAndAttachDocument2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sCompany" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_sMerchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_sOperator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_sPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_RequestID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_Category" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_AttachmentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_Filename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_Document" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAndAttachDocument2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadAndAttachDocument2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadDocumentXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_xmlRequest">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadDocumentXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadDocumentXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sRequest" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadDocumentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValexValuation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LixiValuation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValexValuationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValexValuationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authentication" type="tns:Authentication" />
+      <s:complexType name="Authentication">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="ValexValuationStatusUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LixiStatusUpdate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValexValuationStatusUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValexValuationStatusUpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValexValuationCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LixiCancel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValexValuationCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValexValuationCancelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayloadInteflowSubmit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CreditProduct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClassPayload" type="tns:Payload" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Payload">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Applicants" type="tns:ArrayOfApplicant" />
+          <s:element minOccurs="0" maxOccurs="1" name="Finance" type="tns:Financial" />
+          <s:element minOccurs="0" maxOccurs="1" name="URLPushbacks" type="tns:ArrayOfURL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfApplicant">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Applicant" nillable="true" type="tns:Applicant" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Applicant">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicantType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Individual" type="tns:IndividualDetails" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="tns:CompanyDetails" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="tns:Address" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactDetails" type="tns:Contact" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IndividualDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateOfBirth" type="tns:DateFormat" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrentAddress" type="tns:Address" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DateFormat">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Year" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Month" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Day" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Address">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Property" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UnitNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StreetNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StreetName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StreetType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Suburb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CompanyDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EntityType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyABN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyACN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyLegalName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Contact">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Financial">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FinancialType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinanceAmount" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="BundlePack" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfURL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="URL" nillable="true" type="tns:URL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="URL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SetURL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PayloadInteflowSubmitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayloadInteflowSubmitResult" type="tns:PayloadSubmit" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PayloadSubmit">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PayloadCheckApplication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AppID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayloadCheckApplicationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayloadCheckApplicationResult" type="tns:StatusCheck" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatusCheck">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalReference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="FinanceRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CreditProduct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClassFinance" type="tns:FinanceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FinanceRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RequestData" type="tns:RequestData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RequestData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TotalAmount" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="FinanceTerm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FinanceTermPeriod" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="FinanceRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinanceRequestResult" type="tns:ResponseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RepaymentAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CriterionsConfigurationRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Criterion_List" type="tns:ArrayOfCriteria" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCriteria">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Criteria" nillable="true" type="tns:Criteria" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Criteria">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CriterionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CriterionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MinValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Selection" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionList" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDisabled" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsExisting" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CriterionsConfigurationRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CriterionsConfigurationRequestResult" type="tns:CreateInsuranceProductResponseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreateInsuranceProductResponseData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Outcome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsuranceProductRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InsuranceProduct" type="tns:BasicInsuranceProduct" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BasicInsuranceProduct">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationLevel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsMandatory" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsFinanceEligible" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="HasMultiplePremiums" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDisabled" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsExisting" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Criteria" type="tns:ArrayOfCriteria" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsuranceProductRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsuranceProductRequestResult" type="tns:CreateInsuranceProductResponseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateMerchantRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CreateMerchant" type="tns:BasicMerchantOperator" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BasicMerchantOperator">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NewMerchant" type="tns:BasicMerchant" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewOperator" type="tns:BasicOperator" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BasicMerchant">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentProductAccess" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantParent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantCategory" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantDetail" type="tns:MerchantDetails" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantProductGroups" type="tns:ArrayOfMerchantProductGroup" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantParameters" type="tns:ArrayOfMerchantParameter" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantOperators" type="tns:ArrayOfMerchantOperator" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantProductV2List" type="tns:ArrayOfMerchantProductv2" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantCommissionList" type="tns:ArrayOfMerchantCommission" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MerchantDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TradingName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhysicalAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneAreaCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FaxAreaCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FaxNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomField1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomField2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomField3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomField4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomField5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomField6" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Profile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoginMerchant" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FallBack" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Brand" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dashboard" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Welcome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InterestRate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rating" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Term" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TermsAndConditions" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SearchDecision" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SearchDateRange" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimeZone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultDashboard" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMerchantProductGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MerchantProductGroup" nillable="true" type="tns:MerchantProductGroup" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MerchantProductGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMerchantParameter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MerchantParameter" nillable="true" type="tns:MerchantParameter" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MerchantParameter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMerchantOperator">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MerchantOperator" nillable="true" type="tns:MerchantOperator" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MerchantOperator">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMerchantProductv2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MerchantProductv2" nillable="true" type="tns:MerchantProductv2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MerchantProductv2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMerchantCommission">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MerchantCommission" nillable="true" type="tns:MerchantCommission" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MerchantCommission">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Eligible" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayableTo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BasicOperator">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TemplateOperatorID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorPassword" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccessGroups" type="tns:ArrayOfAccessGroup" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAccessGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AccessGroup" nillable="true" type="tns:AccessGroup" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AccessGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AccessGroupID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateMerchantRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateMerchantRequestResult" type="tns:CreateMerchantResponseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreateMerchantResponseData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Outcome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EditMerchantRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantDetails" type="tns:Merchant" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Merchant">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantDetail" type="tns:MerchantDetails" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantProductGroups" type="tns:ArrayOfMerchantProductGroup" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantParameters" type="tns:ArrayOfMerchantParameter" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantOperators" type="tns:ArrayOfMerchantOperator" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentProductAccess" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MerchantDelete" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantParent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantCategory" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MerchantKeepOperatorAccess" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantCommissionList" type="tns:ArrayOfMerchantCommission" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantProductV2List" type="tns:ArrayOfMerchantProductv2" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EditMerchantRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EditMerchantRequestResult" type="tns:RequestResponseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestResponseData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Outcome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateOperatorRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CreateOperator" type="tns:Operator" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Operator">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultMerchant" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndCustomerOperator" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorDetail" type="tns:OperatorDetails" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorProductGroups" type="tns:ArrayOfOperatorProductGroup" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorAccessGroups" type="tns:ArrayOfOperatorAccessGroup" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorMerchants" type="tns:ArrayOfOperatorMerchant" />
+          <s:element minOccurs="1" maxOccurs="1" name="OperatorDelete" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Option" type="tns:Options" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorFlags" type="tns:OperatorFlag" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultValues" type="tns:DefaultValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="SecondaryLoginDetails" type="tns:SecondaryLogin" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OperatorDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CommunicationPreference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneAreaCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MobileNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FaxAreaCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FaxNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomField1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomField2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomField3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomField4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomField5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomField6" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOperatorProductGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OperatorProductGroup" nillable="true" type="tns:OperatorProductGroup" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OperatorProductGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOperatorAccessGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OperatorAccessGroup" nillable="true" type="tns:OperatorAccessGroup" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OperatorAccessGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOperatorMerchant">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OperatorMerchant" nillable="true" type="tns:OperatorMerchant" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OperatorMerchant">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Options">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Channel" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OperatorFlag">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sPasswordChange" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InternalOperator" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantFallback" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FullMerchantAccess" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DefaultValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SearchDateRange" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SearchDecision" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SearchChannel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServerTimezone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultDashboard" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SecondaryLogin">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SecondaryUsername" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SecondaryPassword" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateOperatorRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateOperatorRequestResult" type="tns:RequestResponseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditOperatorRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OperatorDetails" type="tns:Operator" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditOperatorRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EditOperatorRequestResult" type="tns:RequestResponseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LimitedLoginRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LimitedLoginRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LimitedLoginRequestResult" type="tns:LimitedLoginResponseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LimitedLoginResponseData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Outcome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAssetCategoryList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssetCategoryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssetCategoryListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssetCategoryDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InternalCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssetCategoryDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssetCategoryDetailsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InternalCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductDetailsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdjustmentDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InternalCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdjustmentDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdjustmentDetailsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInsuranceList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInsuranceListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInsuranceListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInsuranceDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Merchant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InternalCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInsuranceDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInsuranceDetailsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.docusign.net/API/3.0">
+      <s:complexType name="DocuSignEnvelopeInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EnvelopeStatus" type="s1:EnvelopeStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentPDFs" type="s1:ArrayOfDocumentPDF" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimeZone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimeZoneOffset" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EnvelopeStatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RecipientStatuses" nillable="true" type="s1:ArrayOfRecipientStatus" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimeGenerated" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnvelopeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s1:EnvelopeStatusCode" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Deleted" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sent" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Delivered" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Signed" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Completed" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Declined" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimedOut" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ACStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ACStatusDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ACHolder" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ACHolderEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ACHolderLocation" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SigningLocation" type="s1:SigningLocationCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="SenderIPAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnvelopePDFHash" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomFields" type="s1:ArrayOfCustomField" />
+          <s:element minOccurs="0" maxOccurs="1" name="VaultingDetails" type="s1:VaultingDetails" />
+          <s:element minOccurs="1" maxOccurs="1" name="AutoNavigation" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="EnvelopeIdStamping" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuthoritativeCopy" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnvelopeAttachment" type="s1:ArrayOfAttachment" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentStatuses" type="s1:ArrayOfDocumentStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormData" type="s1:FormData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRecipientStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RecipientStatus" type="s1:RecipientStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RecipientStatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="s1:RecipientTypeCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RoutingOrder" type="s:unsignedShort" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sent" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Delivered" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Signed" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Declined" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeclineReason" nillable="true" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AutoRespondedReason" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s1:RecipientStatusCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecipientIPAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientUserId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AutoNavigation" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDCheckInformation" type="s1:IDCheckInformation" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecipientAuthenticationStatus" type="s1:AuthenticationStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomFields" type="s1:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="TabStatuses" type="s1:ArrayOfTabStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecipientAttachment" type="s1:ArrayOfAttachment" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EsignAgreementInformation" type="s1:RecipientStatusEsignAgreementInformation" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormData" type="s1:FormData" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecipientId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeliveryMethod" type="s1:DeliveryMethod" />
+          <s:element minOccurs="0" maxOccurs="1" name="FaxNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="RecipientTypeCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Signer" />
+          <s:enumeration value="Agent" />
+          <s:enumeration value="Editor" />
+          <s:enumeration value="Intermediary" />
+          <s:enumeration value="CarbonCopy" />
+          <s:enumeration value="CertifiedDelivery" />
+          <s:enumeration value="InPersonSigner" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="RecipientStatusCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Created" />
+          <s:enumeration value="Sent" />
+          <s:enumeration value="Delivered" />
+          <s:enumeration value="Signed" />
+          <s:enumeration value="Declined" />
+          <s:enumeration value="Completed" />
+          <s:enumeration value="FaxPending" />
+          <s:enumeration value="AutoResponded" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="IDCheckInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddressInformation" type="s1:AddressInformation" />
+          <s:element minOccurs="0" maxOccurs="1" name="DOBInformation" type="s1:DOBInformation" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSN4Information" type="s1:SSN4Information" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AddressInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Street1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZipPlus4" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DOBInformation">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DOB" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SSN4Information">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SSN4" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AuthenticationStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AccessCodeResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDQuestionsResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDLookupResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="AgeVerifyResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="STANPinResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="OFACResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneAuthResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="LiveIDResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="FacebookResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="GoogleResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinkedinResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="SalesforceResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="TwitterResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="OpenIDResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="AnySocialIDResult" type="s1:EventResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="YahooResult" type="s1:EventResult" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EventResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s1:EventStatusCode" />
+          <s:element minOccurs="1" maxOccurs="1" name="EventTimestamp" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="FailureDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorFailureStatusCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EventStatusCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Passed" />
+          <s:enumeration value="Failed" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomField" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTabStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TabStatus" type="s1:TabStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TabStatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TabType" type="s1:TabTypeCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="XPosition" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="YPosition" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Signed" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TabLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TabName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TabValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:positiveInteger" />
+          <s:element minOccurs="0" maxOccurs="1" name="PageNumber" type="s:nonNegativeInteger" />
+          <s:element minOccurs="0" maxOccurs="1" name="OriginalValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValidationPattern" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListValues" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListSelectedValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScaleValue" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomTabType" type="s1:CustomTabType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TabTypeCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="InitialHere" />
+          <s:enumeration value="SignHere" />
+          <s:enumeration value="FullName" />
+          <s:enumeration value="FirstName" />
+          <s:enumeration value="LastName" />
+          <s:enumeration value="EmailAddress" />
+          <s:enumeration value="Company" />
+          <s:enumeration value="Title" />
+          <s:enumeration value="DateSigned" />
+          <s:enumeration value="InitialHereOptional" />
+          <s:enumeration value="EnvelopeID" />
+          <s:enumeration value="Custom" />
+          <s:enumeration value="SignerAttachment" />
+          <s:enumeration value="SignHereOptional" />
+          <s:enumeration value="Approve" />
+          <s:enumeration value="Decline" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="CustomTabType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Text" />
+          <s:enumeration value="Checkbox" />
+          <s:enumeration value="Radio" />
+          <s:enumeration value="List" />
+          <s:enumeration value="Date" />
+          <s:enumeration value="Number" />
+          <s:enumeration value="SSN" />
+          <s:enumeration value="ZIP5" />
+          <s:enumeration value="ZIP5DASH4" />
+          <s:enumeration value="Email" />
+          <s:enumeration value="Note" />
+          <s:enumeration value="Formula" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfAttachment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Attachment" type="s1:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Attachment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Label" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RecipientStatusEsignAgreementInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AccountEsignId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserEsignId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AgreementDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FormData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="xfdf" type="s1:FormDataXfdf" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FormDataXfdf">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="fields" type="s1:ArrayOfFormDataXfdfField" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFormDataXfdfField">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="field" type="s1:FormDataXfdfField" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FormDataXfdfField">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+        </s:sequence>
+        <s:attribute name="name" type="s:string" />
+      </s:complexType>
+      <s:simpleType name="DeliveryMethod">
+        <s:restriction base="s:string">
+          <s:enumeration value="Email" />
+          <s:enumeration value="Fax" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="EnvelopeStatusCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Any" />
+          <s:enumeration value="Voided" />
+          <s:enumeration value="Created" />
+          <s:enumeration value="Deleted" />
+          <s:enumeration value="Sent" />
+          <s:enumeration value="Delivered" />
+          <s:enumeration value="Signed" />
+          <s:enumeration value="Completed" />
+          <s:enumeration value="Declined" />
+          <s:enumeration value="TimedOut" />
+          <s:enumeration value="Template" />
+          <s:enumeration value="Processing" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="SigningLocationCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="InPerson" />
+          <s:enumeration value="Online" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfCustomField">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomField" type="s1:CustomField" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomField">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Show" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Required" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomFieldType" type="s1:CustomFieldType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListItems" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CustomFieldType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Text" />
+          <s:enumeration value="List" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="VaultingDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EODTransactionName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EODTransactionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EODDocumentProfileID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDocumentStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DocumentStatus" type="s1:DocumentStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:positiveInteger" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TemplateName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sequence" type="s:positiveInteger" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDocumentPDF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DocumentPDF" type="s1:DocumentPDF" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentPDF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PDFBytes" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:positiveInteger" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentType" type="s1:DocumentType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="DocumentType">
+        <s:restriction base="s:string">
+          <s:enumeration value="SUMMARY" />
+          <s:enumeration value="CONTENT" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ExecuteRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteRequest" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteXMLRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteXMLRequest" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteXMLRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteXMLRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitRequest" />
+  </wsdl:message>
+  <wsdl:message name="SubmitRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitXMLRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitXMLRequest" />
+  </wsdl:message>
+  <wsdl:message name="SubmitXMLRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitXMLRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransformRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:TransformRequest" />
+  </wsdl:message>
+  <wsdl:message name="TransformRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:TransformRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransformXMLRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:TransformXMLRequest" />
+  </wsdl:message>
+  <wsdl:message name="TransformXMLRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:TransformXMLRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteLongRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteLongRequest" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteLongRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteLongRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckLongRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckLongRequest" />
+  </wsdl:message>
+  <wsdl:message name="CheckLongRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckLongRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditSenseConnectUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:CreditSenseConnectUpdate" />
+  </wsdl:message>
+  <wsdl:message name="CreditSenseConnectUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:CreditSenseConnectUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="YodleeUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:YodleeUpload" />
+  </wsdl:message>
+  <wsdl:message name="YodleeUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:YodleeUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocuSignConnectUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:DocuSignConnectUpdate" />
+  </wsdl:message>
+  <wsdl:message name="DocuSignConnectUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:DocuSignConnectUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinkedDocumentXmlSOAPSoapIn">
+    <wsdl:part name="parameters" element="tns:LinkedDocumentXmlSOAP" />
+  </wsdl:message>
+  <wsdl:message name="LinkedDocumentXmlSOAPSoapOut">
+    <wsdl:part name="parameters" element="tns:LinkedDocumentXmlSOAPResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinkedDocumentXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:LinkedDocumentXml" />
+  </wsdl:message>
+  <wsdl:message name="LinkedDocumentXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:LinkedDocumentXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentList" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadAndAttachDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadAndAttachDocument" />
+  </wsdl:message>
+  <wsdl:message name="UploadAndAttachDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadAndAttachDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadAndAttachDocument2SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadAndAttachDocument2" />
+  </wsdl:message>
+  <wsdl:message name="UploadAndAttachDocument2SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadAndAttachDocument2Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadDocumentXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadDocumentXML" />
+  </wsdl:message>
+  <wsdl:message name="UploadDocumentXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadDocumentXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadDocument" />
+  </wsdl:message>
+  <wsdl:message name="UploadDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValexValuationSoapIn">
+    <wsdl:part name="parameters" element="tns:ValexValuation" />
+  </wsdl:message>
+  <wsdl:message name="ValexValuationSoapOut">
+    <wsdl:part name="parameters" element="tns:ValexValuationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValexValuationAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="ValexValuationStatusUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:ValexValuationStatusUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ValexValuationStatusUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:ValexValuationStatusUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValexValuationStatusUpdateAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="ValexValuationCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:ValexValuationCancel" />
+  </wsdl:message>
+  <wsdl:message name="ValexValuationCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:ValexValuationCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValexValuationCancelAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="PayloadInteflowSubmitSoapIn">
+    <wsdl:part name="parameters" element="tns:PayloadInteflowSubmit" />
+  </wsdl:message>
+  <wsdl:message name="PayloadInteflowSubmitSoapOut">
+    <wsdl:part name="parameters" element="tns:PayloadInteflowSubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayloadCheckApplicationSoapIn">
+    <wsdl:part name="parameters" element="tns:PayloadCheckApplication" />
+  </wsdl:message>
+  <wsdl:message name="PayloadCheckApplicationSoapOut">
+    <wsdl:part name="parameters" element="tns:PayloadCheckApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinanceRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:FinanceRequest" />
+  </wsdl:message>
+  <wsdl:message name="FinanceRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:FinanceRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CriterionsConfigurationRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CriterionsConfigurationRequest" />
+  </wsdl:message>
+  <wsdl:message name="CriterionsConfigurationRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CriterionsConfigurationRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsuranceProductRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:InsuranceProductRequest" />
+  </wsdl:message>
+  <wsdl:message name="InsuranceProductRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:InsuranceProductRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateMerchantRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateMerchantRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateMerchantRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateMerchantRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditMerchantRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:EditMerchantRequest" />
+  </wsdl:message>
+  <wsdl:message name="EditMerchantRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:EditMerchantRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOperatorRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOperatorRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateOperatorRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOperatorRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditOperatorRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:EditOperatorRequest" />
+  </wsdl:message>
+  <wsdl:message name="EditOperatorRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:EditOperatorRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="LimitedLoginRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:LimitedLoginRequest" />
+  </wsdl:message>
+  <wsdl:message name="LimitedLoginRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:LimitedLoginRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetCategoryListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssetCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetCategoryListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssetCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetCategoryDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssetCategoryDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetCategoryDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssetCategoryDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductList" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetProductDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjustmentDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjustmentDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInsuranceListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInsuranceList" />
+  </wsdl:message>
+  <wsdl:message name="GetInsuranceListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInsuranceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInsuranceDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInsuranceDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetInsuranceDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInsuranceDetailsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DecisionWebGatewaySoap">
+    <wsdl:operation name="ExecuteRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;[Recommended] Inteflow basic request&lt;/strong&gt;&lt;br /&gt;Used if sending a request in string format.</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteRequestSoapIn" />
+      <wsdl:output message="tns:ExecuteRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteXMLRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Inteflow XML request&lt;/strong&gt;&lt;br /&gt;Used if sending a request in XML format.</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteXMLRequestSoapIn" />
+      <wsdl:output message="tns:ExecuteXMLRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;[Recommended] Inteflow request for quick response&lt;/strong&gt;&lt;br /&gt;Used if sending a request in string format and you need the response back before processing.</wsdl:documentation>
+      <wsdl:input message="tns:SubmitRequestSoapIn" />
+      <wsdl:output message="tns:SubmitRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitXMLRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;[Recommended] Inteflow request for quick response&lt;/strong&gt;&lt;br /&gt;Used if sending a request in XML format and you need the response back before processing.</wsdl:documentation>
+      <wsdl:input message="tns:SubmitXMLRequestSoapIn" />
+      <wsdl:output message="tns:SubmitXMLRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransformRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Transform XML into a Inteflow request&lt;/strong&gt;&lt;br /&gt;Used if sending a request in string format that needs to be converted to an Inteflow format.</wsdl:documentation>
+      <wsdl:input message="tns:TransformRequestSoapIn" />
+      <wsdl:output message="tns:TransformRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransformXMLRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Transform XML into a Inteflow request&lt;/strong&gt;&lt;br /&gt;Used if sending a request in XML format that needs to be converted to an Inteflow format.</wsdl:documentation>
+      <wsdl:input message="tns:TransformXMLRequestSoapIn" />
+      <wsdl:output message="tns:TransformXMLRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteLongRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Inteflow long request&lt;/strong&gt;&lt;br /&gt;Used by Integate for processing requests that can take 90+ seconds.</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteLongRequestSoapIn" />
+      <wsdl:output message="tns:ExecuteLongRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckLongRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Inteflow checking if a long request is ready&lt;/strong&gt;&lt;br /&gt;Used by Integate along with ExecuteLongRequest to see if the response has been returned.</wsdl:documentation>
+      <wsdl:input message="tns:CheckLongRequestSoapIn" />
+      <wsdl:output message="tns:CheckLongRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditSenseConnectUpdate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;CreditSense Connect Update&lt;/strong&gt;&lt;br /&gt;Called by CreditSense to attach data to an application, and action an application.</wsdl:documentation>
+      <wsdl:input message="tns:CreditSenseConnectUpdateSoapIn" />
+      <wsdl:output message="tns:CreditSenseConnectUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YodleeUpload">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Yodlee Upload&lt;/strong&gt;&lt;br /&gt;Called by Yodlee.</wsdl:documentation>
+      <wsdl:input message="tns:YodleeUploadSoapIn" />
+      <wsdl:output message="tns:YodleeUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocuSignConnectUpdate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;DocuSign Connect Update&lt;/strong&gt;&lt;br /&gt;Called by DocuSign after a customer has completed signing.</wsdl:documentation>
+      <wsdl:input message="tns:DocuSignConnectUpdateSoapIn" />
+      <wsdl:output message="tns:DocuSignConnectUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkedDocumentXmlSOAP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;CreditSense Connect Update [SOAP]&lt;/strong&gt;&lt;br /&gt;Called to attach data to an application, and action an application.</wsdl:documentation>
+      <wsdl:input message="tns:LinkedDocumentXmlSOAPSoapIn" />
+      <wsdl:output message="tns:LinkedDocumentXmlSOAPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkedDocumentXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;CreditSense Connect Update&lt;/strong&gt;&lt;br /&gt;Called to attach data to an application, and action an application.</wsdl:documentation>
+      <wsdl:input message="tns:LinkedDocumentXmlSoapIn" />
+      <wsdl:output message="tns:LinkedDocumentXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Get Document List&lt;/strong&gt;&lt;br /&gt;Returns a list of uploaded documents and their status according to category.</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListSoapIn" />
+      <wsdl:output message="tns:GetDocumentListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadAndAttachDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;DocuSign Connect Update&lt;/strong&gt;&lt;br /&gt;Called by DocuSign after a customer has completed signing.</wsdl:documentation>
+      <wsdl:input message="tns:UploadAndAttachDocumentSoapIn" />
+      <wsdl:output message="tns:UploadAndAttachDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadAndAttachDocument2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;DocuSign Connect Update&lt;/strong&gt;&lt;br /&gt;Called by DocuSign after a customer has completed signing.</wsdl:documentation>
+      <wsdl:input message="tns:UploadAndAttachDocument2SoapIn" />
+      <wsdl:output message="tns:UploadAndAttachDocument2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Upload Document&lt;/strong&gt;&lt;br /&gt;Upload one or more documents and Action.</wsdl:documentation>
+      <wsdl:input message="tns:UploadDocumentXMLSoapIn" />
+      <wsdl:output message="tns:UploadDocumentXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Upload Document&lt;/strong&gt;&lt;br /&gt;Upload one or more documents and Action.</wsdl:documentation>
+      <wsdl:input message="tns:UploadDocumentSoapIn" />
+      <wsdl:output message="tns:UploadDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValexValuation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Valex Valuation Response&lt;/strong&gt;&lt;br /&gt;Called to attach a Valex valuation response to an application and optionally action that application.</wsdl:documentation>
+      <wsdl:input message="tns:ValexValuationSoapIn" />
+      <wsdl:output message="tns:ValexValuationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValexValuationStatusUpdate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Valex Valuation Status Update&lt;/strong&gt;&lt;br /&gt;Called to attach a Valex valuation status update to an application and optionally action that application.</wsdl:documentation>
+      <wsdl:input message="tns:ValexValuationStatusUpdateSoapIn" />
+      <wsdl:output message="tns:ValexValuationStatusUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValexValuationCancel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Valex Valuation Cancel&lt;/strong&gt;&lt;br /&gt;Called to signal cancellation of a Valex valuation and optionally action that application.</wsdl:documentation>
+      <wsdl:input message="tns:ValexValuationCancelSoapIn" />
+      <wsdl:output message="tns:ValexValuationCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayloadInteflowSubmit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Submit an application to Inteflow&lt;/strong&gt;Retrieves a URL connecting users to the submitted application.</wsdl:documentation>
+      <wsdl:input message="tns:PayloadInteflowSubmitSoapIn" />
+      <wsdl:output message="tns:PayloadInteflowSubmitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayloadCheckApplication">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Check the status of a submitted application&lt;/strong&gt;&lt;br /&gt;Retrieve the status of the application plus the identification reference</wsdl:documentation>
+      <wsdl:input message="tns:PayloadCheckApplicationSoapIn" />
+      <wsdl:output message="tns:PayloadCheckApplicationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinanceRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Finance Request Application Submission&lt;/strong&gt;&lt;br /&gt;Retrieves a figure after performing internal calculations based on the submitted application.</wsdl:documentation>
+      <wsdl:input message="tns:FinanceRequestSoapIn" />
+      <wsdl:output message="tns:FinanceRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CriterionsConfigurationRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;CreateInsurance Criterions Request&lt;/strong&gt;&lt;br /&gt;Creates a new Insurance Product for the specified company.</wsdl:documentation>
+      <wsdl:input message="tns:CriterionsConfigurationRequestSoapIn" />
+      <wsdl:output message="tns:CriterionsConfigurationRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsuranceProductRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;CreateInsurance Product Request&lt;/strong&gt;&lt;br /&gt;Creates a new Insurance Product for the specified company.</wsdl:documentation>
+      <wsdl:input message="tns:InsuranceProductRequestSoapIn" />
+      <wsdl:output message="tns:InsuranceProductRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMerchantRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;CreateMerchant Request&lt;/strong&gt;&lt;br /&gt;Creates a new merchant for the specified company.</wsdl:documentation>
+      <wsdl:input message="tns:CreateMerchantRequestSoapIn" />
+      <wsdl:output message="tns:CreateMerchantRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditMerchantRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;EditMerchant Request&lt;/strong&gt;&lt;br /&gt;Creates, updates, deletes a merchant for the specified company.</wsdl:documentation>
+      <wsdl:input message="tns:EditMerchantRequestSoapIn" />
+      <wsdl:output message="tns:EditMerchantRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOperatorRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;CreateOperator Request&lt;/strong&gt;&lt;br /&gt;Creates a new operator for the specified company.</wsdl:documentation>
+      <wsdl:input message="tns:CreateOperatorRequestSoapIn" />
+      <wsdl:output message="tns:CreateOperatorRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditOperatorRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;EditOperator Request&lt;/strong&gt;&lt;br /&gt;Creates, updates, deletes an operator for the specified company.</wsdl:documentation>
+      <wsdl:input message="tns:EditOperatorRequestSoapIn" />
+      <wsdl:output message="tns:EditOperatorRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LimitedLoginRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;LimitedLogin Request&lt;/strong&gt;&lt;br /&gt;Returns a login URL that will be active for 20 minutes from the time of creation.</wsdl:documentation>
+      <wsdl:input message="tns:LimitedLoginRequestSoapIn" />
+      <wsdl:output message="tns:LimitedLoginRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetCategoryList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Get Asset Category List&lt;/strong&gt;&lt;br /&gt;Retrieve a list of asset categories. Retrieve all or filter by external code</wsdl:documentation>
+      <wsdl:input message="tns:GetAssetCategoryListSoapIn" />
+      <wsdl:output message="tns:GetAssetCategoryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetCategoryDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Get Asset Category Details&lt;/strong&gt;&lt;br /&gt;Retrieve details for an asset category</wsdl:documentation>
+      <wsdl:input message="tns:GetAssetCategoryDetailsSoapIn" />
+      <wsdl:output message="tns:GetAssetCategoryDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Get Product List&lt;/strong&gt;&lt;br /&gt;Retrieve a list of products and adjustments. Retrieve all or filter by external code</wsdl:documentation>
+      <wsdl:input message="tns:GetProductListSoapIn" />
+      <wsdl:output message="tns:GetProductListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Get Product Details&lt;/strong&gt;&lt;br /&gt;Retrieve details for a product</wsdl:documentation>
+      <wsdl:input message="tns:GetProductDetailsSoapIn" />
+      <wsdl:output message="tns:GetProductDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Get Adjustment or Promotion Details&lt;/strong&gt;&lt;br /&gt;Retrieve details for an adjustment or promotion</wsdl:documentation>
+      <wsdl:input message="tns:GetAdjustmentDetailsSoapIn" />
+      <wsdl:output message="tns:GetAdjustmentDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Get Insurance List&lt;/strong&gt;&lt;br /&gt;Retrieve a list of insurance products. Retrieve all or filter by external code</wsdl:documentation>
+      <wsdl:input message="tns:GetInsuranceListSoapIn" />
+      <wsdl:output message="tns:GetInsuranceListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;strong&gt;Get Insurance Details&lt;/strong&gt;&lt;br /&gt;Retrieve details for an insurance product</wsdl:documentation>
+      <wsdl:input message="tns:GetInsuranceDetailsSoapIn" />
+      <wsdl:output message="tns:GetInsuranceDetailsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DecisionWebGatewaySoap" type="tns:DecisionWebGatewaySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExecuteRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/ExecuteRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteXMLRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/SubmitRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitXMLRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/SubmitXMLRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransformRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/TransformRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransformXMLRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/TransformXMLRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteLongRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/ExecuteLongRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLongRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/CheckLongRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditSenseConnectUpdate">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/CreditSenseConnectUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YodleeUpload">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/YodleeUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSignConnectUpdate">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/DocuSignConnectUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkedDocumentXmlSOAP">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/LinkedDocumentXmlSOAP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkedDocumentXml">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/LinkedDocumentXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentList">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/GetDocumentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAndAttachDocument">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/UploadAndAttachDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAndAttachDocument2">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/UploadAndAttachDocument2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentXML">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/UploadDocumentXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocument">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/UploadDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValexValuation">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/ValexValuation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ValexValuationAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValexValuationStatusUpdate">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/ValexValuationStatusUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ValexValuationStatusUpdateAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValexValuationCancel">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/ValexValuationCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ValexValuationCancelAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayloadInteflowSubmit">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/PayloadInteflowSubmit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayloadCheckApplication">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/PayloadCheckApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinanceRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/FinanceRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriterionsConfigurationRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/CriterionsConfigurationRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsuranceProductRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/InsuranceProductRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMerchantRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/CreateMerchantRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditMerchantRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/EditMerchantRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOperatorRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/CreateOperatorRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditOperatorRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/EditOperatorRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LimitedLoginRequest">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/LimitedLoginRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetCategoryList">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/GetAssetCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetCategoryDetails">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/GetAssetCategoryDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/GetProductList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductDetails">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/GetProductDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentDetails">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/GetAdjustmentDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceList">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/GetInsuranceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceDetails">
+      <soap:operation soapAction="http://decisionintellect.com/inteport/GetInsuranceDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DecisionWebGatewaySoap12" type="tns:DecisionWebGatewaySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExecuteRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/ExecuteRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteXMLRequest">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/SubmitRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitXMLRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/SubmitXMLRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransformRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/TransformRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransformXMLRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/TransformXMLRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteLongRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/ExecuteLongRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLongRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/CheckLongRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditSenseConnectUpdate">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/CreditSenseConnectUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YodleeUpload">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/YodleeUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSignConnectUpdate">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/DocuSignConnectUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkedDocumentXmlSOAP">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/LinkedDocumentXmlSOAP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkedDocumentXml">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/LinkedDocumentXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentList">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/GetDocumentList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAndAttachDocument">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/UploadAndAttachDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAndAttachDocument2">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/UploadAndAttachDocument2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentXML">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/UploadDocumentXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocument">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/UploadDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValexValuation">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/ValexValuation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ValexValuationAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValexValuationStatusUpdate">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/ValexValuationStatusUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ValexValuationStatusUpdateAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValexValuationCancel">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/ValexValuationCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ValexValuationCancelAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayloadInteflowSubmit">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/PayloadInteflowSubmit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayloadCheckApplication">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/PayloadCheckApplication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinanceRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/FinanceRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriterionsConfigurationRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/CriterionsConfigurationRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsuranceProductRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/InsuranceProductRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMerchantRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/CreateMerchantRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditMerchantRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/EditMerchantRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOperatorRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/CreateOperatorRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditOperatorRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/EditOperatorRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LimitedLoginRequest">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/LimitedLoginRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetCategoryList">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/GetAssetCategoryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetCategoryDetails">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/GetAssetCategoryDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/GetProductList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductDetails">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/GetProductDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentDetails">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/GetAdjustmentDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceList">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/GetInsuranceList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceDetails">
+      <soap12:operation soapAction="http://decisionintellect.com/inteport/GetInsuranceDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DecisionWebGateway">
+    <wsdl:port name="DecisionWebGatewaySoap" binding="tns:DecisionWebGatewaySoap">
+      <soap:address location="http://capturecsp/inteport/decisiongateway.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DecisionWebGatewaySoap12" binding="tns:DecisionWebGatewaySoap12">
+      <soap12:address location="http://capturecsp/inteport/decisiongateway.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

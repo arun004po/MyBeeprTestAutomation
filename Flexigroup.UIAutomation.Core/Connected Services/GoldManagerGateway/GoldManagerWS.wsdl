@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://controller.gold.flexicards.co.nz/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="GoldManagerWS" targetNamespace="http://controller.gold.flexicards.co.nz/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://10.193.10.179:8812/GoldManager/GoldManagerWS?xsd=1" namespace="http://controller.gold.flexicards.co.nz/" />
+    </xsd:schema>
+  </types>
+  <message name="getLtfWhitelistCustomers">
+    <part name="parameters" element="tns:getLtfWhitelistCustomers" />
+  </message>
+  <message name="getLtfWhitelistCustomersResponse">
+    <part name="parameters" element="tns:getLtfWhitelistCustomersResponse" />
+  </message>
+  <message name="updateAdditionalWorkflow">
+    <part name="parameters" element="tns:updateAdditionalWorkflow" />
+  </message>
+  <message name="updateAdditionalWorkflowResponse">
+    <part name="parameters" element="tns:updateAdditionalWorkflowResponse" />
+  </message>
+  <message name="saveOrUpdateLtfWhitelist">
+    <part name="parameters" element="tns:saveOrUpdateLtfWhitelist" />
+  </message>
+  <message name="saveOrUpdateLtfWhitelistResponse">
+    <part name="parameters" element="tns:saveOrUpdateLtfWhitelistResponse" />
+  </message>
+  <message name="saveLtfGlobalTransParam">
+    <part name="parameters" element="tns:saveLtfGlobalTransParam" />
+  </message>
+  <message name="saveLtfGlobalTransParamResponse">
+    <part name="parameters" element="tns:saveLtfGlobalTransParamResponse" />
+  </message>
+  <message name="getAllLtfGlobalTransParam">
+    <part name="parameters" element="tns:getAllLtfGlobalTransParam" />
+  </message>
+  <message name="getAllLtfGlobalTransParamResponse">
+    <part name="parameters" element="tns:getAllLtfGlobalTransParamResponse" />
+  </message>
+  <message name="createAdditionalWorkflow">
+    <part name="parameters" element="tns:createAdditionalWorkflow" />
+  </message>
+  <message name="createAdditionalWorkflowResponse">
+    <part name="parameters" element="tns:createAdditionalWorkflowResponse" />
+  </message>
+  <message name="updateLtfGlobalTransParam">
+    <part name="parameters" element="tns:updateLtfGlobalTransParam" />
+  </message>
+  <message name="updateLtfGlobalTransParamResponse">
+    <part name="parameters" element="tns:updateLtfGlobalTransParamResponse" />
+  </message>
+  <message name="saveOrUpdateUidPromoExclusion">
+    <part name="parameters" element="tns:saveOrUpdateUidPromoExclusion" />
+  </message>
+  <message name="saveOrUpdateUidPromoExclusionResponse">
+    <part name="parameters" element="tns:saveOrUpdateUidPromoExclusionResponse" />
+  </message>
+  <message name="saveLtfTransactionVariationLog">
+    <part name="parameters" element="tns:saveLtfTransactionVariationLog" />
+  </message>
+  <message name="saveLtfTransactionVariationLogResponse">
+    <part name="parameters" element="tns:saveLtfTransactionVariationLogResponse" />
+  </message>
+  <message name="getLtfGlobalTransParamByCode">
+    <part name="parameters" element="tns:getLtfGlobalTransParamByCode" />
+  </message>
+  <message name="getLtfGlobalTransParamByCodeResponse">
+    <part name="parameters" element="tns:getLtfGlobalTransParamByCodeResponse" />
+  </message>
+  <message name="generateAndSendOneTimeCode">
+    <part name="parameters" element="tns:generateAndSendOneTimeCode" />
+  </message>
+  <message name="generateAndSendOneTimeCodeResponse">
+    <part name="parameters" element="tns:generateAndSendOneTimeCodeResponse" />
+  </message>
+  <message name="deleteLtfGlobalTransParam">
+    <part name="parameters" element="tns:deleteLtfGlobalTransParam" />
+  </message>
+  <message name="deleteLtfGlobalTransParamResponse">
+    <part name="parameters" element="tns:deleteLtfGlobalTransParamResponse" />
+  </message>
+  <message name="getActiveLtfPlansByUid">
+    <part name="parameters" element="tns:getActiveLtfPlansByUid" />
+  </message>
+  <message name="getActiveLtfPlansByUidResponse">
+    <part name="parameters" element="tns:getActiveLtfPlansByUidResponse" />
+  </message>
+  <message name="findAdditionalWorkflows">
+    <part name="parameters" element="tns:findAdditionalWorkflows" />
+  </message>
+  <message name="findAdditionalWorkflowsResponse">
+    <part name="parameters" element="tns:findAdditionalWorkflowsResponse" />
+  </message>
+  <message name="saveOrUpdateLtfPlanParam">
+    <part name="parameters" element="tns:saveOrUpdateLtfPlanParam" />
+  </message>
+  <message name="saveOrUpdateLtfPlanParamResponse">
+    <part name="parameters" element="tns:saveOrUpdateLtfPlanParamResponse" />
+  </message>
+  <message name="saveOrUpdateCardProgrammeDetail">
+    <part name="parameters" element="tns:saveOrUpdateCardProgrammeDetail" />
+  </message>
+  <message name="saveOrUpdateCardProgrammeDetailResponse">
+    <part name="parameters" element="tns:saveOrUpdateCardProgrammeDetailResponse" />
+  </message>
+  <message name="findCardProgrammeReln">
+    <part name="parameters" element="tns:findCardProgrammeReln" />
+  </message>
+  <message name="findCardProgrammeRelnResponse">
+    <part name="parameters" element="tns:findCardProgrammeRelnResponse" />
+  </message>
+  <message name="searchCardProgrammes">
+    <part name="parameters" element="tns:searchCardProgrammes" />
+  </message>
+  <message name="searchCardProgrammesResponse">
+    <part name="parameters" element="tns:searchCardProgrammesResponse" />
+  </message>
+  <message name="getAllLtfWhitelist">
+    <part name="parameters" element="tns:getAllLtfWhitelist" />
+  </message>
+  <message name="getAllLtfWhitelistResponse">
+    <part name="parameters" element="tns:getAllLtfWhitelistResponse" />
+  </message>
+  <message name="getAllLtfPlanParam">
+    <part name="parameters" element="tns:getAllLtfPlanParam" />
+  </message>
+  <message name="getAllLtfPlanParamResponse">
+    <part name="parameters" element="tns:getAllLtfPlanParamResponse" />
+  </message>
+  <message name="lookupOneTimeCode">
+    <part name="parameters" element="tns:lookupOneTimeCode" />
+  </message>
+  <message name="lookupOneTimeCodeResponse">
+    <part name="parameters" element="tns:lookupOneTimeCodeResponse" />
+  </message>
+  <message name="deleteLtfPlanParam">
+    <part name="parameters" element="tns:deleteLtfPlanParam" />
+  </message>
+  <message name="deleteLtfPlanParamResponse">
+    <part name="parameters" element="tns:deleteLtfPlanParamResponse" />
+  </message>
+  <message name="deleteLtfWhitelist">
+    <part name="parameters" element="tns:deleteLtfWhitelist" />
+  </message>
+  <message name="deleteLtfWhitelistResponse">
+    <part name="parameters" element="tns:deleteLtfWhitelistResponse" />
+  </message>
+  <message name="validateOneTimeCode">
+    <part name="parameters" element="tns:validateOneTimeCode" />
+  </message>
+  <message name="validateOneTimeCodeResponse">
+    <part name="parameters" element="tns:validateOneTimeCodeResponse" />
+  </message>
+  <message name="queryPromosForUid">
+    <part name="parameters" element="tns:queryPromosForUid" />
+  </message>
+  <message name="queryPromosForUidResponse">
+    <part name="parameters" element="tns:queryPromosForUidResponse" />
+  </message>
+  <message name="getPlanByPlanId">
+    <part name="parameters" element="tns:getPlanByPlanId" />
+  </message>
+  <message name="getPlanByPlanIdResponse">
+    <part name="parameters" element="tns:getPlanByPlanIdResponse" />
+  </message>
+  <portType name="GoldManagerWS">
+    <operation name="getLtfWhitelistCustomers">
+      <input wsam:Action="getLtfWhitelistCustomers" message="tns:getLtfWhitelistCustomers" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/getLtfWhitelistCustomersResponse" message="tns:getLtfWhitelistCustomersResponse" />
+    </operation>
+    <operation name="updateAdditionalWorkflow">
+      <input wsam:Action="updateAdditionalWorkflow" message="tns:updateAdditionalWorkflow" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/updateAdditionalWorkflowResponse" message="tns:updateAdditionalWorkflowResponse" />
+    </operation>
+    <operation name="saveOrUpdateLtfWhitelist">
+      <input wsam:Action="saveOrUpdateLtfWhitelist" message="tns:saveOrUpdateLtfWhitelist" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/saveOrUpdateLtfWhitelistResponse" message="tns:saveOrUpdateLtfWhitelistResponse" />
+    </operation>
+    <operation name="saveLtfGlobalTransParam">
+      <input wsam:Action="saveLtfGlobalTransParam" message="tns:saveLtfGlobalTransParam" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/saveLtfGlobalTransParamResponse" message="tns:saveLtfGlobalTransParamResponse" />
+    </operation>
+    <operation name="getAllLtfGlobalTransParam">
+      <input wsam:Action="getAllLtfGlobalTransParam" message="tns:getAllLtfGlobalTransParam" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/getAllLtfGlobalTransParamResponse" message="tns:getAllLtfGlobalTransParamResponse" />
+    </operation>
+    <operation name="createAdditionalWorkflow">
+      <input wsam:Action="createAdditionalWorkflow" message="tns:createAdditionalWorkflow" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/createAdditionalWorkflowResponse" message="tns:createAdditionalWorkflowResponse" />
+    </operation>
+    <operation name="updateLtfGlobalTransParam">
+      <input wsam:Action="updateLtfGlobalTransParam" message="tns:updateLtfGlobalTransParam" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/updateLtfGlobalTransParamResponse" message="tns:updateLtfGlobalTransParamResponse" />
+    </operation>
+    <operation name="saveOrUpdateUidPromoExclusion">
+      <input wsam:Action="saveOrUpdateUidPromoExclusion" message="tns:saveOrUpdateUidPromoExclusion" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/saveOrUpdateUidPromoExclusionResponse" message="tns:saveOrUpdateUidPromoExclusionResponse" />
+    </operation>
+    <operation name="saveLtfTransactionVariationLog">
+      <input wsam:Action="saveLtfTransactionVariationLog" message="tns:saveLtfTransactionVariationLog" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/saveLtfTransactionVariationLogResponse" message="tns:saveLtfTransactionVariationLogResponse" />
+    </operation>
+    <operation name="getLtfGlobalTransParamByCode">
+      <input wsam:Action="getLtfGlobalTransParamByCode" message="tns:getLtfGlobalTransParamByCode" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/getLtfGlobalTransParamByCodeResponse" message="tns:getLtfGlobalTransParamByCodeResponse" />
+    </operation>
+    <operation name="generateAndSendOneTimeCode">
+      <input wsam:Action="generateAndSendOneTimeCode" message="tns:generateAndSendOneTimeCode" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/generateAndSendOneTimeCodeResponse" message="tns:generateAndSendOneTimeCodeResponse" />
+    </operation>
+    <operation name="deleteLtfGlobalTransParam">
+      <input wsam:Action="deleteLtfGlobalTransParam" message="tns:deleteLtfGlobalTransParam" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/deleteLtfGlobalTransParamResponse" message="tns:deleteLtfGlobalTransParamResponse" />
+    </operation>
+    <operation name="getActiveLtfPlansByUid">
+      <input wsam:Action="getActiveLtfPlansByUid" message="tns:getActiveLtfPlansByUid" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/getActiveLtfPlansByUidResponse" message="tns:getActiveLtfPlansByUidResponse" />
+    </operation>
+    <operation name="findAdditionalWorkflows">
+      <input wsam:Action="findAdditionalWorkflows" message="tns:findAdditionalWorkflows" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/findAdditionalWorkflowsResponse" message="tns:findAdditionalWorkflowsResponse" />
+    </operation>
+    <operation name="saveOrUpdateLtfPlanParam">
+      <input wsam:Action="saveOrUpdateLtfPlanParam" message="tns:saveOrUpdateLtfPlanParam" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/saveOrUpdateLtfPlanParamResponse" message="tns:saveOrUpdateLtfPlanParamResponse" />
+    </operation>
+    <operation name="saveOrUpdateCardProgrammeDetail">
+      <input wsam:Action="saveOrUpdateCardProgrammeDetail" message="tns:saveOrUpdateCardProgrammeDetail" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/saveOrUpdateCardProgrammeDetailResponse" message="tns:saveOrUpdateCardProgrammeDetailResponse" />
+    </operation>
+    <operation name="findCardProgrammeReln">
+      <input wsam:Action="findCardProgrammeReln" message="tns:findCardProgrammeReln" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/findCardProgrammeRelnResponse" message="tns:findCardProgrammeRelnResponse" />
+    </operation>
+    <operation name="searchCardProgrammes">
+      <input wsam:Action="searchCardProgrammes" message="tns:searchCardProgrammes" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/searchCardProgrammesResponse" message="tns:searchCardProgrammesResponse" />
+    </operation>
+    <operation name="getAllLtfWhitelist">
+      <input wsam:Action="getAllLtfWhitelist" message="tns:getAllLtfWhitelist" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/getAllLtfWhitelistResponse" message="tns:getAllLtfWhitelistResponse" />
+    </operation>
+    <operation name="getAllLtfPlanParam">
+      <input wsam:Action="getAllLtfPlanParam" message="tns:getAllLtfPlanParam" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/getAllLtfPlanParamResponse" message="tns:getAllLtfPlanParamResponse" />
+    </operation>
+    <operation name="lookupOneTimeCode">
+      <input wsam:Action="lookupOneTimeCode" message="tns:lookupOneTimeCode" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/lookupOneTimeCodeResponse" message="tns:lookupOneTimeCodeResponse" />
+    </operation>
+    <operation name="deleteLtfPlanParam">
+      <input wsam:Action="deleteLtfPlanParam" message="tns:deleteLtfPlanParam" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/deleteLtfPlanParamResponse" message="tns:deleteLtfPlanParamResponse" />
+    </operation>
+    <operation name="deleteLtfWhitelist">
+      <input wsam:Action="deleteLtfWhitelist" message="tns:deleteLtfWhitelist" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/deleteLtfWhitelistResponse" message="tns:deleteLtfWhitelistResponse" />
+    </operation>
+    <operation name="validateOneTimeCode">
+      <input wsam:Action="validateOneTimeCode" message="tns:validateOneTimeCode" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/validateOneTimeCodeResponse" message="tns:validateOneTimeCodeResponse" />
+    </operation>
+    <operation name="queryPromosForUid">
+      <input wsam:Action="queryPromosForUid" message="tns:queryPromosForUid" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/queryPromosForUidResponse" message="tns:queryPromosForUidResponse" />
+    </operation>
+    <operation name="getPlanByPlanId">
+      <input wsam:Action="getPlanByPlanId" message="tns:getPlanByPlanId" />
+      <output wsam:Action="http://controller.gold.flexicards.co.nz/GoldManagerWS/getPlanByPlanIdResponse" message="tns:getPlanByPlanIdResponse" />
+    </operation>
+  </portType>
+  <binding name="GoldManagerWSPortBinding" type="tns:GoldManagerWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getLtfWhitelistCustomers">
+      <soap:operation soapAction="getLtfWhitelistCustomers" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAdditionalWorkflow">
+      <soap:operation soapAction="updateAdditionalWorkflow" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="saveOrUpdateLtfWhitelist">
+      <soap:operation soapAction="saveOrUpdateLtfWhitelist" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="saveLtfGlobalTransParam">
+      <soap:operation soapAction="saveLtfGlobalTransParam" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllLtfGlobalTransParam">
+      <soap:operation soapAction="getAllLtfGlobalTransParam" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createAdditionalWorkflow">
+      <soap:operation soapAction="createAdditionalWorkflow" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateLtfGlobalTransParam">
+      <soap:operation soapAction="updateLtfGlobalTransParam" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="saveOrUpdateUidPromoExclusion">
+      <soap:operation soapAction="saveOrUpdateUidPromoExclusion" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="saveLtfTransactionVariationLog">
+      <soap:operation soapAction="saveLtfTransactionVariationLog" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getLtfGlobalTransParamByCode">
+      <soap:operation soapAction="getLtfGlobalTransParamByCode" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generateAndSendOneTimeCode">
+      <soap:operation soapAction="generateAndSendOneTimeCode" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteLtfGlobalTransParam">
+      <soap:operation soapAction="deleteLtfGlobalTransParam" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getActiveLtfPlansByUid">
+      <soap:operation soapAction="getActiveLtfPlansByUid" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findAdditionalWorkflows">
+      <soap:operation soapAction="findAdditionalWorkflows" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="saveOrUpdateLtfPlanParam">
+      <soap:operation soapAction="saveOrUpdateLtfPlanParam" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="saveOrUpdateCardProgrammeDetail">
+      <soap:operation soapAction="saveOrUpdateCardProgrammeDetail" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findCardProgrammeReln">
+      <soap:operation soapAction="findCardProgrammeReln" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="searchCardProgrammes">
+      <soap:operation soapAction="searchCardProgrammes" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllLtfWhitelist">
+      <soap:operation soapAction="getAllLtfWhitelist" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllLtfPlanParam">
+      <soap:operation soapAction="getAllLtfPlanParam" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="lookupOneTimeCode">
+      <soap:operation soapAction="lookupOneTimeCode" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteLtfPlanParam">
+      <soap:operation soapAction="deleteLtfPlanParam" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteLtfWhitelist">
+      <soap:operation soapAction="deleteLtfWhitelist" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validateOneTimeCode">
+      <soap:operation soapAction="validateOneTimeCode" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryPromosForUid">
+      <soap:operation soapAction="queryPromosForUid" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPlanByPlanId">
+      <soap:operation soapAction="getPlanByPlanId" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="GoldManagerWS">
+    <port name="GoldManagerWSPort" binding="tns:GoldManagerWSPortBinding">
+      <soap:address location="https://10.193.10.179:8812/GoldManager/GoldManagerWS" />
+    </port>
+  </service>
+</definitions>
